@@ -9,7 +9,7 @@ services:
       - ./analysis:/home/jovyan/work
     environment:
       - GRANT_SUDO=yes
-      - PG_HOST=postgres
+      - PG_HOST=tfpg_database
       - PG_PORT=5432
       - PG_USER=postgres
       - PG_PASS=""
