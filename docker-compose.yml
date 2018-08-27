@@ -1,0 +1,22 @@
+version: '3'
+services:
+  notebook:
+    container_name: tfpg_notebook
+    build: analysis
+    ports:
+      - 8888:8888
+    volumes:
+      - ./analysis:/home/jovyan/work
+    environment:
+      - GRANT_SUDO=yes
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_USER=postgres
+      - PG_PASS=""
+  postgres:
+    container_name: tfpg_db
+    build: database
+    ports:
+      - 5432:5432
+    volumes:
+      - ./_volumes/postgres-data:/var/lib/postgresql/data
