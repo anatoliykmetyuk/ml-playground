@@ -18,7 +18,7 @@ RUN conda create -y -n p2 python=2.7 ipykernel ipython
 RUN conda install -y -n p2 \
     'blas=*=openblas' \
     'ipywidgets=7.1*' \
-    'pandas=0.19*' \
+    'pandas=0.21*' \
     'numexpr=2.6*' \
     'matplotlib=2.0*' \
     'scipy=0.19*' \

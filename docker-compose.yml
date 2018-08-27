@@ -1,7 +1,7 @@
 version: '3'
 services:
   notebook:
-    container_name: tfpg_notebook
+    container_name: tfpg_analysis
     build: analysis
     ports:
       - 8888:8888
@@ -14,7 +14,7 @@ services:
       - PG_USER=postgres
       - PG_PASS=""
   postgres:
-    container_name: tfpg_db
+    container_name: tfpg_database
     build: database
     ports:
       - 5432:5432
