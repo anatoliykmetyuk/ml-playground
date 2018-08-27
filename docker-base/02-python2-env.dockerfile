@@ -11,8 +11,8 @@ RUN conda create -y -n p2 python=2.7 \
     matplotlib        \
     scipy             \
     seaborn           \
-    scikit            \
-    scikit            \
+    scikit-learn      \
+    scikit-image      \
     sympy             \
     cython            \
     patsy             \
