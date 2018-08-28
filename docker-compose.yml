@@ -5,6 +5,7 @@ services:
     build: analysis
     ports:
       - 8888:8888
+      - 6006:6006
     volumes:
       - ./analysis:/home/jovyan/work
     environment:

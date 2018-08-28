@@ -1,5 +1,7 @@
 FROM jupyter/tensorflow-notebook
 
+########## SETUP ##########
+
 # Update the system
 USER root
 RUN apt-get update

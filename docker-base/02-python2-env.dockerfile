@@ -1,6 +1,7 @@
 FROM tfpg-setup
 
-# Python 2 Environment
+########## Python 2.7 Support ##########
+
 RUN conda create -y -n p2 python=2.7 \
     ipykernel         \
     ipython           \

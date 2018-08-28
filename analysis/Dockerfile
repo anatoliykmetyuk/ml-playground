@@ -10,3 +10,7 @@ RUN echo '\
   }\
 }\
 ' > .jupyter/nbconfig/notebook.json
+
+ENV TENSORBOARD_LOG_DIR="/home/jovyan/work/logs/"
+
+CMD start-notebook.sh & tensorboard --logdir $TENSORBOARD_LOG_DIR
