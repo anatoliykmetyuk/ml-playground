@@ -74,7 +74,6 @@ RUN conda clean -tipsy && \
 
 
 ########## MINOR CONFIGURATION ##########
-
 RUN mkdir .jupyter/nbconfig
 RUN echo '\
 {\
@@ -85,6 +84,14 @@ RUN echo '\
   }\
 }\
 ' > .jupyter/nbconfig/notebook.json
+
+RUN echo '\
+{\
+  "NotebookApp": {\
+    "custom_display_url": "http://localhost:8888"\
+  }\
+}\
+'> ~/.jupyter/jupyter_notebook_config.json
 
 ENV TENSORBOARD_LOG_DIR="/home/jovyan/work/logs/"
 
